@@ -43,8 +43,8 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        float xDirection = Input.GetAxis("Horizontal");
-        body.velocity = new Vector2(x * speed, body.velocity.y);
+       // float xDirection = Input.GetAxis("Horizontal");
+        //body.velocity = new Vector2(x * speed, body.velocity.y);
 
     }
 
