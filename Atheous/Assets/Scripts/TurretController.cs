@@ -5,21 +5,21 @@ using UnityEngine;
 public class TurretController : MonoBehaviour
 {
     
-    public GameObject bullet;
+    public GameObject bulletHor;
     public int health = 60;
-    public float spawnTime = 2;
-    public float elapsedTime = 0;
+    public float spawnTimeHor = 2;
+    public float elapsedTimeHor = 0;
     
 	// Update is called once per frame
 	void Update ()
     {
-        elapsedTime += Time.deltaTime;
+        elapsedTimeHor += Time.deltaTime;
 
-        if (elapsedTime >= spawnTime)
+        if (elapsedTimeHor >= spawnTimeHor)
         {
-            GameObject newBullet = Instantiate(bullet);
+            GameObject newBullet = Instantiate(bulletHor);
             newBullet.transform.position = transform.position;
-            elapsedTime = 0;
+            elapsedTimeHor = 0;
         }
 
 
