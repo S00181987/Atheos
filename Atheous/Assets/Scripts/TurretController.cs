@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class TurretController : MonoBehaviour
 {
-    
+
+    private Animator attack;
     public GameObject bulletHor;
     public int health = 60;
     public float spawnTimeHor = 2;
     public float elapsedTimeHor = 0;
-    
-	// Update is called once per frame
-	void Update ()
+
+    private void Start()
+    {
+        attack = GetComponent<Animator>();
+    }
+
+    // Update is called once per frame
+    void Update ()
     {
         elapsedTimeHor += Time.deltaTime;
 
@@ -21,8 +27,6 @@ public class TurretController : MonoBehaviour
             newBullet.transform.position = transform.position;
             elapsedTimeHor = 0;
         }
-
-
 
     }
 
