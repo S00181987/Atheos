@@ -43,9 +43,8 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-       // float xDirection = Input.GetAxis("Horizontal");
+        // float xDirection = Input.GetAxis("Horizontal");
         //body.velocity = new Vector2(x * speed, body.velocity.y);
-        //Sam is adding a comment to give this a wee go like.
 
     }
 
@@ -53,7 +52,7 @@ public class PlayerController : MonoBehaviour
     {
         string tag = collision.gameObject.tag;
 
-        //Reaper damage
+        //
         if (collision.gameObject.tag == "reaper")
         {
             health -= 20;
@@ -70,17 +69,7 @@ public class PlayerController : MonoBehaviour
         {
             health -= 30;
         }
-
-        if (tag =="ground")
-        {
-            isOnGround = true;
-        }
-
-    }
-
-    private void OnTriggerEnter20(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "floppy")
+        else if (collision.gameObject.tag == "floppyDisc")
         {
             floppyDiscs++;
         }
@@ -88,5 +77,13 @@ public class PlayerController : MonoBehaviour
         {
             keys++;
         }
+
+
+        if (tag == "ground")
+        {
+            isOnGround = true;
+        }
+
     }
+
 }
