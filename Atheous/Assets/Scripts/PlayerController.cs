@@ -43,9 +43,8 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-       // float xDirection = Input.GetAxis("Horizontal");
+        // float xDirection = Input.GetAxis("Horizontal");
         //body.velocity = new Vector2(x * speed, body.velocity.y);
-        //Sam is adding a comment to give this a wee go like.
 
     }
 
@@ -70,7 +69,7 @@ public class PlayerController : MonoBehaviour
         {
             health -= 30;
         }
-        else if (collision.gameObject.tag == "floppy")
+        else if (collision.gameObject.tag == "floppyDisc")
         {
             floppyDiscs++;
         }
