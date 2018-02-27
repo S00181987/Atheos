@@ -106,10 +106,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5f62b0ed83f41d4aae9de6f9996e1b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1632216164330998, guid: 45b4cfb7d98124f468bade121c32bb7c, type: 2}
+  bulletHor: {fileID: 1632216164330998, guid: 45b4cfb7d98124f468bade121c32bb7c, type: 2}
   health: 60
-  spawnTime: 2
-  elapsedTime: 0
+  spawnTimeHor: 2
+  elapsedTimeHor: 0
 --- !u!212 &212398408443448588
 SpriteRenderer:
   m_ObjectHideFlags: 1
