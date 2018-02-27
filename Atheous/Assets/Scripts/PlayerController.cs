@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
 
     bool isOnGround = false;//for jumpie jumps.
     Vector2 force;
+    Vector2 velocity;
     Rigidbody2D body;
 
     private Vector3 startPosition;//change to hub or begining of level? When health = 0.
@@ -28,12 +29,18 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        float x = Input.GetAxis("Horizontal");
+        float y = Input.GetAxis("Vertical");
+
+        velocity.x = x * speed;
+        velocity.y = y * speed;
+
         if (health<0)
         {//choose position of respawn. Hub or checkpoint in game.
             int sceneIndex = SceneManager.GetActiveScene().buildIndex;
         }
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.RightArrow))
         {
             if (isOnGround)
             {
@@ -41,11 +48,21 @@ public class PlayerController : MonoBehaviour
                 isOnGround = false;
                 jumpNumber++;//added for double jump mechanics later.
             }
+
+            body.velocity = new Vector2(x * speed, body.velocity.y);
+             
+            
+
+            
+
+
+
+            
         }
 
        // float xDirection = Input.GetAxis("Horizontal");
         //body.velocity = new Vector2(x * speed, body.velocity.y);
-        //Sam is adding a comment to give this a wee go like.
+ 
 
     }
 
