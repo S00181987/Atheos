@@ -40,31 +40,30 @@ public class PlayerController : MonoBehaviour
             int sceneIndex = SceneManager.GetActiveScene().buildIndex;
         }
 
-        if(Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
-            if (isOnGround)
-            {
-                body.AddForce(force, ForceMode2D.Impulse);
-                isOnGround = false;
-                jumpNumber++;//added for double jump mechanics later.
-            }
-
             body.velocity = new Vector2(x * speed, body.velocity.y);
-             
-            
-
-            
-
-
-
-            
+        }
+        else if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            body.velocity = new Vector2(x * speed, body.velocity.y);
         }
 
-       // float xDirection = Input.GetAxis("Horizontal");
-        //body.velocity = new Vector2(x * speed, body.velocity.y);
- 
+
+        if (isOnGround && Input.GetKey(KeyCode.UpArrow))
+        {
+            body.AddForce(force, ForceMode2D.Impulse);
+            isOnGround = false;
+            jumpNumber++;//added for double jump mechanics later.
+
+        }
 
     }
+
+    // float xDirection = Input.GetAxis("Horizontal");
+    //body.velocity = new Vector2(x * speed, body.velocity.y);
+
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -88,7 +87,7 @@ public class PlayerController : MonoBehaviour
             health -= 30;
         }
 
-        if (tag =="ground")
+        if (tag == "ground")
         {
             isOnGround = true;
         }
@@ -106,4 +105,8 @@ public class PlayerController : MonoBehaviour
             keys++;
         }
     }
+
 }
+
+    
+
