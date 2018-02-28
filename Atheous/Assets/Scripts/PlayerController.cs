@@ -10,6 +10,10 @@ public class PlayerController : MonoBehaviour
     public int health = 100, keys = 0, floppyDiscs = 0;//Number of floppies to determine what text is available to read.
     public int jumpNumber = 0;//for double jump later
 
+    //animator variables
+    private Animator animator;
+    private int direction = 0, attack = 0, defence = 0, jump = 0;
+
     bool isOnGround = false;//for jumpie jumps.
     Vector2 force;
     Vector2 velocity;
@@ -23,8 +27,9 @@ public class PlayerController : MonoBehaviour
     {
         force.y = jumpForce;
         body = GetComponent<Rigidbody2D>();
-        startPosition = transform.position;//amend for Hub position?		
-	}
+        startPosition = transform.position;//amend for Hub position?	
+        animator = GetComponent<Animator>();
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -40,22 +45,63 @@ public class PlayerController : MonoBehaviour
             int sceneIndex = SceneManager.GetActiveScene().buildIndex;
         }
 
+        //movement
         if (Input.GetKey(KeyCode.RightArrow))
         {
             body.velocity = new Vector2(x * speed, body.velocity.y);
+            direction = 1;
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             body.velocity = new Vector2(x * speed, body.velocity.y);
+            direction = 1;
         }
-
+        else if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            body.velocity = new Vector2(0,0);
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            body.velocity = new Vector2(0, 0);
+        }
 
         if (isOnGround && Input.GetKey(KeyCode.UpArrow))
         {
             body.AddForce(force, ForceMode2D.Impulse);
             isOnGround = false;
             jumpNumber++;//added for double jump mechanics later.
+            jump = 1;
+        }
 
+        /*
+        if (!isOnGround)
+        {
+            jump = 1;
+        }
+
+        
+        if (Input.GetKey(KeyCode.A))
+        {
+            attack = 1;
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            defence = 1;
+        }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            jump = 1;
+        }
+        */
+
+        animator.SetInteger("direction", direction);
+        animator.SetInteger("jump", jump);
+
+
+        if (body.velocity.y == 0)
+        {
+            direction = 0;
+            jump = 0;
         }
 
     }
