@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private int direction = 0, attack = 0, defence = 0, jump = 0;
 
     bool isOnGround = false;//for jumpie jumps.
+    bool hasSword = true;//only activates when you get the sword.
     Vector2 force;
     Vector2 velocity;
     Rigidbody2D body;
@@ -56,13 +57,32 @@ public class PlayerController : MonoBehaviour
             body.velocity = new Vector2(x * speed, body.velocity.y);
             direction = 1;
         }
-        else if (Input.GetKeyUp(KeyCode.RightArrow))
+
+        if (Input.GetKeyUp(KeyCode.RightArrow))
         {
             body.velocity = new Vector2(0,0);
         }
         else if (Input.GetKeyUp(KeyCode.LeftArrow))
         {
             body.velocity = new Vector2(0, 0);
+        }
+
+        if (Input.GetKey(KeyCode.C))
+        {
+            defence = 1;
+        }
+        else if (Input.GetKeyUp(KeyCode.C))
+        {
+            defence = 0;
+        }
+
+        if (Input.GetKey(KeyCode.Z) && hasSword)
+        {
+            attack = 1;
+        }
+        else if (Input.GetKeyUp(KeyCode.Z) && hasSword)
+        {
+            attack = 0;
         }
 
         if (isOnGround && Input.GetKey(KeyCode.UpArrow))
@@ -73,27 +93,9 @@ public class PlayerController : MonoBehaviour
             jump = 1;
         }
 
-        /*
-        if (!isOnGround)
-        {
-            jump = 1;
-        }
 
-        
-        if (Input.GetKey(KeyCode.A))
-        {
-            attack = 1;
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            defence = 1;
-        }
-        if (Input.GetKey(KeyCode.Space))
-        {
-            jump = 1;
-        }
-        */
-
+        animator.SetInteger("attack", attack);
+        animator.SetInteger("defence", defence);
         animator.SetInteger("direction", direction);
         animator.SetInteger("jump", jump);
 
