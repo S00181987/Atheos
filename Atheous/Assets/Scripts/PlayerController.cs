@@ -16,9 +16,11 @@ public class PlayerController : MonoBehaviour
 
     bool isOnGround = false;//for jumpie jumps.
     bool hasSword = true;//only activates when you get the sword.
+    bool directionFlip = false;
     Vector2 force;
     Vector2 velocity;
     Rigidbody2D body;
+    private SpriteRenderer spriteFlip;
 
     private Vector3 startPosition;//change to hub or begining of level? When health = 0.
 
@@ -30,6 +32,7 @@ public class PlayerController : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         startPosition = transform.position;//amend for Hub position?	
         animator = GetComponent<Animator>();
+        spriteFlip = GetComponent<SpriteRenderer>();
     }
 	
 	// Update is called once per frame
@@ -41,6 +44,15 @@ public class PlayerController : MonoBehaviour
         velocity.x = x * speed;
         velocity.y = y * speed;
 
+        if (directionFlip)
+        {
+            spriteFlip.flipX = true;
+        }
+        else
+        {
+            spriteFlip.flipX = false;
+        }
+
         if (health<0)
         {//choose position of respawn. Hub or checkpoint in game.
             int sceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -51,11 +63,13 @@ public class PlayerController : MonoBehaviour
         {
             body.velocity = new Vector2(x * speed, body.velocity.y);
             direction = 1;
+            directionFlip = false;
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             body.velocity = new Vector2(x * speed, body.velocity.y);
             direction = 1;
+            directionFlip = true;
         }
 
         if (Input.GetKeyUp(KeyCode.RightArrow))
