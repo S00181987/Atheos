@@ -127,10 +127,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    // float xDirection = Input.GetAxis("Horizontal");
-    //body.velocity = new Vector2(x * speed, body.velocity.y);
-
-
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
