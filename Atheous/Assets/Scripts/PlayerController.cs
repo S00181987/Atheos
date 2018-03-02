@@ -64,6 +64,11 @@ public class PlayerController : MonoBehaviour
             body.velocity = new Vector2(x * speed, body.velocity.y);
             direction = 1;
             directionFlip = false;
+
+            if(Input.GetKey(KeyCode.Z))
+            {
+                attack = 1;
+            }
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
