@@ -22,9 +22,9 @@ public class BatController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        string tag = collision.gameObject.tag;
+        //string tag = collision.gameObject.tag;
 
-        if (tag == "sword")
+        if (collision.gameObject.tag == "sword")
         {
             //verify numbers with group
             health -= 25;

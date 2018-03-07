@@ -109,21 +109,19 @@ public class PlayerController : MonoBehaviour
         {
             jumpKeyDown = true;
         }
-        
-        while (jumpNumber<2)
+
+
+        if (isOnGround && Input.GetKey(KeyCode.UpArrow))
         {
-            if (isOnGround && Input.GetKey(KeyCode.UpArrow))
+            body.AddForce(force, ForceMode2D.Impulse);
+            isOnGround = false;
+            jumpNumber++;//added for double jump mechanics later.
+            jump = 1;
+            if (canDoubleJump && Input.GetKey(KeyCode.UpArrow))
             {
                 body.AddForce(force, ForceMode2D.Impulse);
                 isOnGround = false;
-                jumpNumber++;//added for double jump mechanics later.
-                jump = 1;
-                if (canDoubleJump)
-                {
-                    body.AddForce(force, ForceMode2D.Impulse);
-                    isOnGround = false;
-                    jumpNumber++;
-                }
+                jumpNumber++;
             }
         }
 
