@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     bool isOnGround = false;//for jumpie jumps.
     bool hasSword = true;//only activates when you get the sword.
     bool directionFlip = false;
-    bool jumpKeyDown, grounded, canDoubleJump;
+    bool jumpKeyDown, grounded, canDoubleJump = true;
     Vector2 force;
     Vector2 velocity;
     Rigidbody2D body;
