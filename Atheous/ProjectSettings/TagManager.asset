@@ -12,6 +12,7 @@ TagManager:
   - floppy
   - key
   - player
+  - reaper
   layers:
   - Default
   - TransparentFX
