@@ -9,6 +9,8 @@ TagManager:
   - rat
   - bat
   - ground
+  - floppy
+  - key
   layers:
   - Default
   - TransparentFX
