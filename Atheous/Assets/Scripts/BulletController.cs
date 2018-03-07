@@ -19,7 +19,8 @@ public class BulletController : MonoBehaviour {
         {
             Destroy(gameObject);
         }
-		if (collision.gameObject.tag == "player") {
+		if (collision.gameObject.tag == "player") 
+		{
 			Destroy (gameObject);
 		}
 
