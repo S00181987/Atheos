@@ -105,13 +105,30 @@ public class PlayerController : MonoBehaviour
             attack = 0;
         }
 
-        if (Input.GetKey(KeyCode.UpArrow)
+        if (Input.GetKey(KeyCode.UpArrow))
         {
-        jumpKeyDown = true;
+            jumpKeyDown = true;
         }
         
-        
-        
+        while (jumpNumber<2)
+        {
+            if (isOnGround && Input.GetKey(KeyCode.UpArrow))
+            {
+                body.AddForce(force, ForceMode2D.Impulse);
+                isOnGround = false;
+                jumpNumber++;//added for double jump mechanics later.
+                jump = 1;
+                if (canDoubleJump)
+                {
+                    body.AddForce(force, ForceMode2D.Impulse);
+                    isOnGround = false;
+                    jumpNumber++;
+                }
+            }
+        }
+
+
+        /********************************************
         if (jumpKeyDown)
         {
             if (grounded)
@@ -131,6 +148,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+        *********************************************/
 
 
         animator.SetInteger("attack", attack);
