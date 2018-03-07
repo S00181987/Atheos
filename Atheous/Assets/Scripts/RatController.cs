@@ -20,10 +20,10 @@ public class RatController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "ground")
+        /*if (collision.gameObject.tag == "ground")
         {
             directionHor *= -1;
-        }
+        }*/
 
         string tag = collision.gameObject.tag;
 

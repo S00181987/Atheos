@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     bool isOnGround = false;//for jumpie jumps.
     bool hasSword = true;//only activates when you get the sword.
     bool directionFlip = false;
+    bool jumpKeyDown, grounded, canDoubleJump;
     Vector2 force;
     Vector2 velocity;
     Rigidbody2D body;
@@ -104,12 +105,31 @@ public class PlayerController : MonoBehaviour
             attack = 0;
         }
 
-        if (isOnGround && Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow)
         {
-            body.AddForce(force, ForceMode2D.Impulse);
-            isOnGround = false;
-            jumpNumber++;//added for double jump mechanics later.
-            jump = 1;
+        jumpKeyDown = true;
+        }
+        
+        
+        
+        if (jumpKeyDown)
+        {
+            if (grounded)
+            {
+                rigidbody2D.velocity.y = 0;
+                rigidbody2D.AddForce(new Vector2(0, jumpForce));
+                canDoubleJump = true;
+            }
+
+            else
+            {
+                if (canDoubleJump)
+                {
+                    canDoubleJump = false;
+                    rigidbody2D.velocity.y = 0;
+                    rigidbody2D.AddForce(new Vector2(0, jumpForce));
+                }
+            }
         }
 
 
@@ -152,13 +172,9 @@ public class PlayerController : MonoBehaviour
 
         if (tag == "ground")
         {
-            isOnGround = true;
+            grounded = true;
         }
 
-    }
-
-    private void OnTriggerEnter20(Collider2D collision)
-    {
         if (collision.gameObject.tag == "floppy")
         {
             floppyDiscs++;
@@ -167,9 +183,12 @@ public class PlayerController : MonoBehaviour
         {
             keys++;
         }
+
+    }
+
+    private void OnTriggerEnter20(Collider2D collision)
+    {
+
     }
 
 }
-
-    
-
