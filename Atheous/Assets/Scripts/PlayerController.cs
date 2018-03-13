@@ -155,7 +155,7 @@ public class PlayerController : MonoBehaviour
         animator.SetInteger("jump", jump);
 
 
-        if (body.velocity.y == 0)
+        if (body.velocity.y == 0.0)
         {
             direction = 0;
             jump = 0;
