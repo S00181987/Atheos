@@ -9,19 +9,19 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1590406376271180}
+  m_RootGameObject: {fileID: 1293495820576588}
   m_IsPrefabParent: 1
---- !u!1 &1590406376271180
+--- !u!1 &1293495820576588
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4697824470180448}
-  - component: {fileID: 212558118798365080}
-  - component: {fileID: 95514715408348336}
-  - component: {fileID: 114697637718290036}
+  - component: {fileID: 4058719715808768}
+  - component: {fileID: 212540234466152844}
+  - component: {fileID: 95988220217139354}
+  - component: {fileID: 114788061863253196}
   m_Layer: 0
   m_Name: turret
   m_TagString: Player
@@ -29,26 +29,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4697824470180448
+--- !u!4 &4058719715808768
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1590406376271180}
+  m_GameObject: {fileID: 1293495820576588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.8401556, y: -0.6874425, z: -0.0417169}
+  m_LocalPosition: {x: 4.77, y: 2.02, z: -0.0417169}
   m_LocalScale: {x: 0.9641713, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95514715408348336
+--- !u!95 &95988220217139354
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1590406376271180}
+  m_GameObject: {fileID: 1293495820576588}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 0}
@@ -59,12 +59,12 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114697637718290036
+--- !u!114 &114788061863253196
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1590406376271180}
+  m_GameObject: {fileID: 1293495820576588}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c6e2eaaffad3394caf2f2b3dbee0918, type: 3}
@@ -74,15 +74,16 @@ MonoBehaviour:
   health: 60
   spawnTimeHor: 2
   elapsedTimeHor: 0
---- !u!212 &212558118798365080
+--- !u!212 &212540234466152844
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1590406376271180}
+  m_GameObject: {fileID: 1293495820576588}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -98,6 +99,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
