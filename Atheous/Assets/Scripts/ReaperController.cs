@@ -5,6 +5,7 @@ using UnityEngine;
 public class ReaperController : MonoBehaviour
 {
     //speed can be changed at a later date
+
     public float directionVert = 1, speedVert = 2;
     public int health = 25;
 	
@@ -28,9 +29,13 @@ public class ReaperController : MonoBehaviour
 
         string tag = collision.gameObject.tag;
 
-        if (tag == "sword")
+        if (tag == "player")
         {
-            health -= 25;
+            if(GameObject.Find("player").GetComponent<PlayerController>().isAttacking)
+            {
+                health -= 25;
+            }
+
         }
     }
 }

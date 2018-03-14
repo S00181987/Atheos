@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     bool hasSword = true;//only activates when you get the sword.
     bool directionFlip = false;
     bool jumpKeyDown, grounded, canDoubleJump = true;
+    public bool isAttacking = false;
     Vector2 force;
     Vector2 velocity;
     Rigidbody2D body;
@@ -39,6 +40,7 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        isAttacking = false;
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
 
@@ -99,6 +101,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.Z) && hasSword)
         {
             attack = 1;
+            isAttacking = true;
         }
         else if (Input.GetKeyUp(KeyCode.Z) && hasSword)
         {
@@ -188,7 +191,11 @@ public class PlayerController : MonoBehaviour
         //Reaper damage
         if (collision.gameObject.tag == "reaper")
         {
-            health -= 20;
+            if (!isAttacking)
+            {
+                health -= 20;
+            }
+
         }
         else if (collision.gameObject.tag == "rat")
         {
