@@ -1,6 +1,6 @@
 ﻿<Properties StartupConfiguration="{77DB3942-3B0B-91DC-D48F-75EDECB9AB59}|">
   <MonoDevelop.Ide.ItemProperties.Atheous PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/VerticalBulletController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerController.cs">
     <Files>
       <File FileName="Assets/Scripts/RatController.cs" Line="36" Column="2" />
       <File FileName="Assets/Scripts/PlayerController.cs" Line="158" Column="35" />

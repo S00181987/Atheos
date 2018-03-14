@@ -6,15 +6,15 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 10;
-    public float jumpForce = 10;
+    public float jumpForce = 2f;
     public int health = 100, keys = 0, floppyDiscs = 0;//Number of floppies to determine what text is available to read.
-    public int jumpNumber = 0;//for double jump later
+    public int jumpNumber = 2, maxJumps = 2;
 
     //animator variables
     private Animator animator;
     private int direction = 0, attack = 0, defence = 0, jump = 0;
 
-    bool isOnGround = false;//for jumpie jumps.
+    bool isOnGround = false;
     bool hasSword = true;//only activates when you get the sword.
     bool directionFlip = false;
     bool jumpKeyDown, grounded, canDoubleJump = true;
@@ -111,18 +111,20 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        if (isOnGround && Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            body.AddForce(force, ForceMode2D.Impulse);
-            isOnGround = false;
-            jumpNumber++;//added for double jump mechanics later.
+            //body.AddForce(force, ForceMode2D.Impulse);
+            //isOnGround = false;
+            doubleJump();
             jump = 1;
+            /*
             if (canDoubleJump && Input.GetKey(KeyCode.UpArrow))
             {
-                body.AddForce(force, ForceMode2D.Impulse);
+                
+                //body.AddForce(force, ForceMode2D.Impulse);
                 isOnGround = false;
-                jumpNumber++;
-            }
+
+            }*/
         }
 
 
@@ -164,6 +166,21 @@ public class PlayerController : MonoBehaviour
     }
 
 
+    private void doubleJump()
+    {
+        if(jumpNumber > 0)
+        {
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            jumpNumber -= 1;
+            isOnGround = false;
+        }
+        else if(jumpNumber == 0)
+        {
+            return;
+        }
+    }
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         string tag = collision.gameObject.tag;
@@ -189,6 +206,7 @@ public class PlayerController : MonoBehaviour
         if (tag == "ground")
         {
             grounded = true;
+            jumpNumber = maxJumps;
         }
 
         if (collision.gameObject.tag == "floppy")
@@ -202,7 +220,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter20(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
 
     }
