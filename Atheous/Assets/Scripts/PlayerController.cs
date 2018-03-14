@@ -199,15 +199,27 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.tag == "rat")
         {
-            health -= 25;
+            if(!isAttacking)
+            {
+                health -= 25;
+            }
+           
         }
         else if (collision.gameObject.tag == "bullet")
         {
-            health -= 20;
+            if(!isAttacking)
+            {
+                health -= 20;
+            }
+
         }
         else if (collision.gameObject.tag == "bat")
         {
-            health -= 30;
+            if(!isAttacking)
+            {
+                health -= 30;
+            }
+
         }
 
         if (tag == "ground")

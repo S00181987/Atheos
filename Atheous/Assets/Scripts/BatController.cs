@@ -24,10 +24,13 @@ public class BatController : MonoBehaviour
     {
         //string tag = collision.gameObject.tag;
 
-        if (collision.gameObject.tag == "sword")
+        if (collision.gameObject.tag == "player")
         {
-            //verify numbers with group
-            health -= 25;
+            if (GameObject.Find("player").GetComponent<PlayerController>().isAttacking)
+            {
+                health -= 25;
+            }
+
         }
     }
 }

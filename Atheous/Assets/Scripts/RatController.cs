@@ -27,9 +27,13 @@ public class RatController : MonoBehaviour
 
         string tag = collision.gameObject.tag;
 
-        if (tag == "sword")
+        if (tag == "player")
         {
-            health -= 25;
+            if (GameObject.Find("player").GetComponent<PlayerController>().isAttacking)
+            {
+                health -= 25;
+            }
+
         }
     }
 
