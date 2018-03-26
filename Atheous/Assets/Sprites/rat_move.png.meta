@@ -1,17 +1,14 @@
 fileFormatVersion: 2
-guid: be33083309d8c8a4f86c78647e6915fb
-timeCreated: 1521066550
+guid: 8aeceb724b3ccef4a84096715b1cff43
+timeCreated: 1521067169
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: rat (3)_0
-    21300002: rat (3)_1
-    21300004: rat (3)_2
-    21300006: rat (3)_3
-    21300008: rat (3)_4
-    21300010: rat (3)_5
-    21300012: rat (3)_6
-    21300014: rat (3)_7
+    21300000: rat_move_0
+    21300002: rat_move_1
+    21300004: rat_move_2
+    21300006: rat_move_3
+    21300008: rat_move_4
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -98,13 +95,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rat (3)_0
+      name: rat_move_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 146
         width: 60
-        height: 32
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,13 +109,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: rat (3)_1
+      name: rat_move_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 66
         y: 146
         width: 60
-        height: 30
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,27 +123,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: rat (3)_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 146
-        width: 60
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: rat (3)_3
+      name: rat_move_2
       rect:
         serializedVersion: 2
         x: 0
         y: 82
-        width: 60
-        height: 30
+        width: 62
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,13 +137,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: rat (3)_4
+      name: rat_move_3
       rect:
         serializedVersion: 2
-        x: 64
+        x: 66
         y: 82
         width: 60
-        height: 30
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,41 +151,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: rat (3)_5
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 82
-        width: 60
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: rat (3)_6
+      name: rat_move_4
       rect:
         serializedVersion: 2
         x: 0
         y: 18
-        width: 60
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: rat (3)_7
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 18
-        width: 60
-        height: 32
+        width: 62
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

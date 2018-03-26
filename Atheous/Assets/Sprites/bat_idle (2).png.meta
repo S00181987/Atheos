@@ -1,17 +1,25 @@
 fileFormatVersion: 2
-guid: be33083309d8c8a4f86c78647e6915fb
-timeCreated: 1521066550
+guid: 1a807b743eb111e4cbfb48e0d6a0cbc5
+timeCreated: 1521066157
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: rat (3)_0
-    21300002: rat (3)_1
-    21300004: rat (3)_2
-    21300006: rat (3)_3
-    21300008: rat (3)_4
-    21300010: rat (3)_5
-    21300012: rat (3)_6
-    21300014: rat (3)_7
+    21300000: bat_idle (2)_0
+    21300002: bat_idle (2)_1
+    21300004: bat_idle (2)_2
+    21300006: bat_idle (2)_3
+    21300008: bat_idle (2)_4
+    21300010: bat_idle (2)_5
+    21300012: bat_idle (2)_6
+    21300014: bat_idle (2)_7
+    21300016: bat_idle (2)_8
+    21300018: bat_idle (2)_9
+    21300020: bat_idle (2)_10
+    21300022: bat_idle (2)_11
+    21300024: bat_idle (2)_12
+    21300026: bat_idle (2)_13
+    21300028: bat_idle (2)_14
+    21300030: bat_idle (2)_15
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -98,12 +106,40 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rat (3)_0
+      name: bat_idle (2)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 146
-        width: 60
+        x: 8
+        y: 208
+        width: 52
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bat_idle (2)_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 208
+        width: 52
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bat_idle (2)_2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 208
+        width: 44
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -112,68 +148,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: rat (3)_1
+      name: bat_idle (2)_3
       rect:
         serializedVersion: 2
-        x: 64
-        y: 146
-        width: 60
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: rat (3)_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 146
-        width: 60
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: rat (3)_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 82
-        width: 60
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: rat (3)_4
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 82
-        width: 60
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: rat (3)_5
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 82
-        width: 60
+        x: 200
+        y: 208
+        width: 48
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -182,12 +162,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: rat (3)_6
+      name: bat_idle (2)_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 18
-        width: 60
+        x: 8
+        y: 144
+        width: 44
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -196,13 +176,153 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: rat (3)_7
+      name: bat_idle (2)_5
       rect:
         serializedVersion: 2
-        x: 64
-        y: 18
-        width: 60
+        x: 72
+        y: 144
+        width: 36
         height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bat_idle (2)_6
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 144
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bat_idle (2)_7
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 144
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bat_idle (2)_8
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 80
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bat_idle (2)_9
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 80
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bat_idle (2)_10
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 80
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bat_idle (2)_11
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 80
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bat_idle (2)_12
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 16
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bat_idle (2)_13
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 16
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bat_idle (2)_14
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 16
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bat_idle (2)_15
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 16
+        width: 52
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
