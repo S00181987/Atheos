@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ChangeSceneTrigger : MonoBehaviour
+public class ChangeSceneOnTrigger : MonoBehaviour
 {
 
     public string sceneName = "TheHub";
@@ -12,7 +12,7 @@ public class ChangeSceneTrigger : MonoBehaviour
     {
         string objectTag = collision.gameObject.tag;
 
-        if (objectTag == "Player")
+        if (objectTag == "player")
         {
             if (!string.IsNullOrEmpty(sceneName))
             {

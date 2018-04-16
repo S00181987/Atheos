@@ -6,35 +6,35 @@ using UnityEngine.SceneManagement;
 
 public class DoorController : MonoBehaviour
 {
-
-
     //Used for the hub doors to load levels and require a 
     //key press to load level
     public string sceneName = "TheWoods";
+    public bool keyPressed = false;
 
+	private void Update()
+	{
+        if(Input.GetKeyDown(KeyCode.J))
+        {
+            keyPressed = true;
+        }
+        else
+        {
+            keyPressed = false;
+        }
+	}
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+	private void OnTriggerEnter2D(Collider2D collision)
     {
         string objectTag = collision.gameObject.tag;
 
-        if (objectTag == "Player" && Input.GetKeyDown(KeyCode.X))
+
+        if (objectTag == "player" && keyPressed)
         {
             if (!string.IsNullOrEmpty(sceneName))
             {
                 SceneManager.LoadScene(sceneName);
             }
         }
+
     }
 }    
