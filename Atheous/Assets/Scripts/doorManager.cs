@@ -13,4 +13,11 @@ public class doorManager : MonoBehaviour {
 	void Update () {
 		
 	}
-}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (tag == "player")
+        {
+            
+        }
+    }
+    
