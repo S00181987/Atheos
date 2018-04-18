@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 10;
     public float jumpForce = 2f;
-    public int health = 100, keys = 0, floppyDiscs = 0;//Number of floppies to determine what text is available to read.
+    public static int health = 100, keys = 0, floppyDiscs = 0;//Number of floppies to determine what text is available to read.
     public int jumpNumber = 2, maxJumps = 2;
 
     //animator variables

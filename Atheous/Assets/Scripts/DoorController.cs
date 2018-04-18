@@ -11,21 +11,26 @@ public class DoorController : MonoBehaviour
     public string sceneName = "TheWoods";
     public bool keyPressed = false;
     public int requiredFloppies;
+    PlayerController playerController;
 
-    
+
+	private void Start()
+	{
+        playerController = GameObject.FindGameObjectWithTag("player").GetComponent<PlayerController>();
+	}
+
 
 	private void Update()
 	{
         if(Input.GetKeyDown(KeyCode.X))
         {
-            //PlayerController playerController = gameObject.GetComponent<PlayerController>();
-            //if(requiredFloppies >= playerController.floppyDiscs)
-            //{
+            if(PlayerController.floppyDiscs >=requiredFloppies)
+            {
                 if (keyPressed)
                 {
                     SceneManager.LoadScene(sceneName);
                 }
-            //}
+            }
            
         }
 	}

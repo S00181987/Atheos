@@ -2,10 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FloppDiscController : MonoBehaviour {
+public class FloppDiscController : MonoBehaviour 
+{
+    PlayerController playerController;
+    public int floppies;
+
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+    {
+        playerController = GameObject.FindGameObjectWithTag("player").GetComponent<PlayerController>();
+        if(PlayerController.floppyDiscs >= floppies)
+        {
+            gameObject.SetActive(false);
+        }
+
 		
 	}
 	
