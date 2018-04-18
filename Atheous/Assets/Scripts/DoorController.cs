@@ -15,11 +15,11 @@ public class DoorController : MonoBehaviour
 	{
         if(Input.GetKeyDown(KeyCode.J))
         {
-            keyPressed = true;
-        }
-        else
-        {
-            keyPressed = false;
+            if(keyPressed)
+            {
+                SceneManager.LoadScene(sceneName);
+            }
+           
         }
 	}
 
@@ -28,13 +28,12 @@ public class DoorController : MonoBehaviour
         string objectTag = collision.gameObject.tag;
 
 
-        //if (objectTag == "player" && keyPressed)
-        //{
-            if (!string.IsNullOrEmpty(sceneName))
-            {
-                SceneManager.LoadScene(sceneName);
-            }
-        //}
+        if (objectTag == "player")
+        {
+            
+                keyPressed = true;
+
+        }
 
     }
 }    
