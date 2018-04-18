@@ -18,14 +18,14 @@ public class DoorController : MonoBehaviour
 	{
         if(Input.GetKeyDown(KeyCode.X))
         {
-            PlayerController playerController = gameObject.GetComponent<PlayerController>();
-            if(requiredFloppies >= playerController.floppyDiscs)
-            {
+            //PlayerController playerController = gameObject.GetComponent<PlayerController>();
+            //if(requiredFloppies >= playerController.floppyDiscs)
+            //{
                 if (keyPressed)
                 {
                     SceneManager.LoadScene(sceneName);
                 }
-            }
+            //}
            
         }
 	}
