@@ -189,15 +189,8 @@ public class PlayerController : MonoBehaviour
         string tag = collision.gameObject.tag;
 
         //Reaper damage
-        if (collision.gameObject.tag == "reaper")
-        {
-            if (!isAttacking)
-            {
-                health -= 20;
-            }
 
-        }
-        else if (collision.gameObject.tag == "rat")
+        if (collision.gameObject.tag == "rat")
         {
             if(!isAttacking)
             {
@@ -222,7 +215,7 @@ public class PlayerController : MonoBehaviour
 
         }
 
-        if (tag == "ground")
+        if (tag == "ground" || tag == "wall")
         {
             grounded = true;
             jumpNumber = maxJumps;
@@ -241,7 +234,14 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "reaper")
+        {
+            if (!isAttacking)
+            {
+                health -= 20;
+            }
 
+        }
     }
 
 }

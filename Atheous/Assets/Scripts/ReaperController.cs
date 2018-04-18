@@ -22,6 +22,11 @@ public class ReaperController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Using tags to change direction
+
+    }
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
         if (collision.gameObject.tag == "ground")
         {
             directionVert *= -1;
@@ -31,11 +36,11 @@ public class ReaperController : MonoBehaviour
 
         if (tag == "player")
         {
-            if(GameObject.Find("player").GetComponent<PlayerController>().isAttacking)
+            if (GameObject.Find("player").GetComponent<PlayerController>().isAttacking)
             {
                 health -= 25;
             }
 
         }
-    }
+	}
 }
