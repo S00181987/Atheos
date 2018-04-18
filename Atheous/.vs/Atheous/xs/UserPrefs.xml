@@ -1,6 +1,6 @@
 ﻿<Properties StartupConfiguration="{77DB3942-3B0B-91DC-D48F-75EDECB9AB59}|">
   <MonoDevelop.Ide.ItemProperties.Atheous PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DoorController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BulletController.cs">
     <Files>
       <File FileName="Assets/Scripts/PlayerController.cs" Line="27" Column="1" />
       <File FileName="Assets/Scripts/RatController.cs" Line="43" Column="34" />
@@ -13,8 +13,7 @@
       <File FileName="Assets/Scripts/KeyController.cs" Line="26" Column="5" />
       <File FileName="Assets/Scripts/FloppDiscController.cs" Line="24" Column="6" />
       <File FileName="Assets/Scripts/TurretController.cs" Line="8" Column="27" />
-      <File FileName="Assets/Scripts/ChangeSceneOnTrigger.cs" Line="21" Column="10" />
-      <File FileName="Assets/Scripts/DoorController.cs" Line="32" Column="34" />
+      <File FileName="Assets/Scripts/DoorController.cs" Line="37" Column="10" />
       <File FileName="Assets/Scripts/ButtonManager.cs" Line="18" Column="1" />
       <File FileName="Assets/Scripts/HealthBarController.cs" Line="22" Column="1" />
     </Files>
