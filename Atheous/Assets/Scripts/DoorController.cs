@@ -28,13 +28,13 @@ public class DoorController : MonoBehaviour
         string objectTag = collision.gameObject.tag;
 
 
-        if (objectTag == "player" && keyPressed)
-        {
+        //if (objectTag == "player" && keyPressed)
+        //{
             if (!string.IsNullOrEmpty(sceneName))
             {
                 SceneManager.LoadScene(sceneName);
             }
-        }
+        //}
 
     }
 }    
