@@ -46,6 +46,12 @@ public class RatController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+       
+
+    }
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
         if (collision.gameObject.tag == "wall")
         {
             directionHor *= -1;
@@ -60,8 +66,8 @@ public class RatController : MonoBehaviour
             {
                 health -= 25;
             }
-
         }
-    }
+
+	}
 
 }

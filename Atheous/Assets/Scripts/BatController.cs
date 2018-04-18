@@ -36,6 +36,11 @@ public class BatController : MonoBehaviour
     {
         //string tag = collision.gameObject.tag;
 
+
+    }
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
         if (collision.gameObject.tag == "player")
         {
             if (GameObject.Find("player").GetComponent<PlayerController>().isAttacking)
@@ -43,6 +48,6 @@ public class BatController : MonoBehaviour
                 health -= 25;
             }
 
-        }
-    }
+        }		
+	}
 }
