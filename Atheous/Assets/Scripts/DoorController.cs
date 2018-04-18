@@ -13,7 +13,7 @@ public class DoorController : MonoBehaviour
 
 	private void Update()
 	{
-        if(Input.GetKeyDown(KeyCode.J))
+        if(Input.GetKeyDown(KeyCode.X))
         {
             if(keyPressed)
             {

@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{77DB3942-3B0B-91DC-D48F-75EDECB9AB59}|">
   <MonoDevelop.Ide.ItemProperties.Atheous PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CameraController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DoorController.cs">
     <Files>
-      <File FileName="Assets/Scripts/CameraController.cs" Line="6" Column="1" />
+      <File FileName="Assets/Scripts/CameraController.cs" Line="36" Column="3" />
       <File FileName="../../../../Downloads/Sample AI Behaviours Level/Assets/Scripts/PathFollowingScripts/FollowPath.cs" Line="44" Column="18" />
+      <File FileName="Assets/Scripts/DoorController.cs" Line="23" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
