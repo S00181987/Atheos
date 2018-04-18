@@ -10,14 +10,21 @@ public class DoorController : MonoBehaviour
     //key press to load level
     public string sceneName = "TheWoods";
     public bool keyPressed = false;
+    public int requiredFloppies;
+
+    
 
 	private void Update()
 	{
         if(Input.GetKeyDown(KeyCode.X))
         {
-            if(keyPressed)
+            PlayerController playerController = gameObject.GetComponent<PlayerController>();
+            if(requiredFloppies >= playerController.floppyDiscs)
             {
-                SceneManager.LoadScene(sceneName);
+                if (keyPressed)
+                {
+                    SceneManager.LoadScene(sceneName);
+                }
             }
            
         }
@@ -26,6 +33,7 @@ public class DoorController : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D collision)
     {
         string objectTag = collision.gameObject.tag;
+
 
 
         if (objectTag == "player")
