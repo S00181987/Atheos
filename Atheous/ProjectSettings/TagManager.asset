@@ -16,6 +16,7 @@ TagManager:
   - barrier
   - Undefined
   - wall
+  - Door
   layers:
   - Default
   - TransparentFX

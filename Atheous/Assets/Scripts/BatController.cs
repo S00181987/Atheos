@@ -5,10 +5,11 @@ using UnityEngine;
 public class BatController : MonoBehaviour
 {
 
-    //Need the player object for code to work
     public int health = 75;
     public float speed = 2;
-    //public GameObject Player;
+    public float trackRadius = 5f;
+    public bool isTracking = false;
+    public GameObject Player;
 
 	void Update ()
     {
@@ -17,13 +18,29 @@ public class BatController : MonoBehaviour
         {
             Destroy(gameObject);
         }
-		
+
+        if (Vector2.Distance(transform.position, Player.transform.position) <= trackRadius)
+        {
+            isTracking = true;
+        }
+        else
+        {
+            isTracking = false;
+        }
+
+
+
 	}
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //string tag = collision.gameObject.tag;
 
+
+    }
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
         if (collision.gameObject.tag == "player")
         {
             if (GameObject.Find("player").GetComponent<PlayerController>().isAttacking)
@@ -31,6 +48,6 @@ public class BatController : MonoBehaviour
                 health -= 25;
             }
 
-        }
-    }
+        }		
+	}
 }

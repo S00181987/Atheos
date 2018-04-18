@@ -1,18 +1,14 @@
 ﻿<Properties StartupConfiguration="{77DB3942-3B0B-91DC-D48F-75EDECB9AB59}|">
   <MonoDevelop.Ide.ItemProperties.Atheous PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FloppDiscController.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="72" Column="14" />
-      <File FileName="Assets/Scripts/RatController.cs" Line="43" Column="34" />
-      <File FileName="Assets/Scripts/VerticalBulletController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BulletController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/AudioScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BatController.cs" Line="33" Column="13" />
-      <File FileName="Assets/Scripts/WallJump.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ReaperController.cs" Line="25" Column="45" />
-      <File FileName="Assets/Scripts/KeyController.cs" Line="26" Column="5" />
-      <File FileName="Assets/Scripts/FloppDiscController.cs" Line="24" Column="6" />
-      <File FileName="Assets/Scripts/TurretController.cs" Line="8" Column="27" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="10" Column="48" />
+      <File FileName="Assets/Scripts/DoorController.cs" Line="27" Column="13" />
+      <File FileName="Assets/Scripts/CameraController.cs" Line="28" Column="45" />
+      <File FileName="../../../../Downloads/Sample AI Behaviours Level/Assets/Scripts/PathFollowingScripts/FollowPath.cs" Line="44" Column="18" />
+      <File FileName="Assets/Scripts/BatController.cs" Line="51" Column="10" />
+      <File FileName="Assets/Scripts/BulletController.cs" Line="33" Column="33" />
+      <File FileName="Assets/Scripts/FloppDiscController.cs" Line="28" Column="12" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
