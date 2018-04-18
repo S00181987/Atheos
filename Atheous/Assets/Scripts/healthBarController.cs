@@ -1,10 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 using UnityEngine.UI;
-
-//Credit to Philip D' Arcy Y3 Games
 public class HealthBarController : MonoBehaviour
 {
     private Image barImage;
@@ -12,9 +9,10 @@ public class HealthBarController : MonoBehaviour
     void Start()
     {
         barImage = GetComponent<Image>();
+  
     }
 
-    public void UpdateHealth(float health)
+    public void updateHealth(float health)
     {
         barImage.fillAmount = health;
     }
