@@ -20,7 +20,7 @@ public class BulletController : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "ground" || collision.gameObject.tag == "player")
+        if (collision.gameObject.tag == "ground")
         {
             Destroy(gameObject);
         }
@@ -28,6 +28,10 @@ public class BulletController : MonoBehaviour {
 		{
 			Destroy (gameObject);
 		}
+        if (collision.gameObject.tag == "wall")
+        {
+            Destroy(gameObject);
+        }
 
     }
 }

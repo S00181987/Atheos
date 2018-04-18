@@ -190,15 +190,8 @@ public class PlayerController : MonoBehaviour
 
         //Reaper damage
 
-        if (collision.gameObject.tag == "rat")
-        {
-            if(!isAttacking)
-            {
-                health -= 25;
-            }
-           
-        }
-        else if (collision.gameObject.tag == "bullet")
+
+        if (collision.gameObject.tag == "bullet")
         {
             if(!isAttacking)
             {
@@ -206,14 +199,8 @@ public class PlayerController : MonoBehaviour
             }
 
         }
-        else if (collision.gameObject.tag == "bat")
-        {
-            if(!isAttacking)
-            {
-                health -= 30;
-            }
 
-        }
+
 
         if (tag == "ground" || tag == "wall")
         {
@@ -239,6 +226,22 @@ public class PlayerController : MonoBehaviour
             if (!isAttacking)
             {
                 health -= 20;
+            }
+
+        }
+        else if (collision.gameObject.tag == "rat")
+        {
+            if (!isAttacking)
+            {
+                health -= 25;
+            }
+
+        }
+        else if (collision.gameObject.tag == "bat")
+        {
+            if (!isAttacking)
+            {
+                health -= 30;
             }
 
         }
