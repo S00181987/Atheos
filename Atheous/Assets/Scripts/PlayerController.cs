@@ -103,6 +103,22 @@ public class PlayerController : MonoBehaviour
         {
             defence = 0;
         }
+        //SWORD * * * * * * * * * * * * * * * * * * * * * * * *
+        //Sword obtained after level one
+        /*
+        if(floppyDiscs >= 1)
+        {
+            if (Input.GetKey(KeyCode.Z))
+            {
+                attack = 1;
+                isAttacking = true;
+            }
+            else if (Input.GetKeyUp(KeyCode.Z))
+            {
+                attack = 0;
+            }
+        }
+        */
 
         if (Input.GetKey(KeyCode.Z) && hasSword)
         {
@@ -120,20 +136,20 @@ public class PlayerController : MonoBehaviour
         }
 
 
+
+        //JUMPS * * * * * * * * * * * * * * * * * * * * * * * *
+        /*
+        if (floppyDiscs >= 3)
+            //double jump obtained after level 3
+            jumpNumber = 2;
+        else
+            jumpNumber = 1;
+        */
+
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            //body.AddForce(force, ForceMode2D.Impulse);
-            //isOnGround = false;
             doubleJump();
             jump = 1;
-            /*
-            if (canDoubleJump && Input.GetKey(KeyCode.UpArrow))
-            {
-                
-                //body.AddForce(force, ForceMode2D.Impulse);
-                isOnGround = false;
-
-            }*/
         }
 
 
