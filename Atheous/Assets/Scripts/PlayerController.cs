@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
+
 public class PlayerController : MonoBehaviour
 {
     public float speed = 10;
@@ -23,16 +25,18 @@ public class PlayerController : MonoBehaviour
     Vector2 velocity;
     Rigidbody2D body;
     private SpriteRenderer spriteFlip;
-    Text text;
+    //Text healthText;
     private Vector3 startPosition;//change to hub or begining of level? When health = 0.
 
 
-    // Use this for initialization
 
-     void Awake()
+
+     /*void Awake()
     {
-        //text = GetComponent<Text>();
+        healthText = GetComponent<Text>();
     }
+        */
+
     void Start ()
     {
         force.y = jumpForce;
@@ -45,7 +49,7 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        //text.text = "Health: " + health;
+        //healthText.text = "Health: " + health;
         isAttacking = false;
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
