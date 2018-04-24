@@ -153,32 +153,10 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
+            //DoubleJumpTwo();
             doubleJump();
             jump = 1;
         }
-
-
-        /********************************************
-        if (jumpKeyDown)
-        {
-            if (grounded)
-            {
-                rigidbody2D.velocity.y = 0;
-                rigidbody2D.AddForce(new Vector2(0, jumpForce));
-                canDoubleJump = true;
-            }
-
-            else
-            {
-                if (canDoubleJump)
-                {
-                    canDoubleJump = false;
-                    rigidbody2D.velocity.y = 0;
-                    rigidbody2D.AddForce(new Vector2(0, jumpForce));
-                }
-            }
-        }
-        *********************************************/
 
 
         animator.SetInteger("attack", attack);
@@ -196,9 +174,11 @@ public class PlayerController : MonoBehaviour
     }
 
 
+
+
     private void doubleJump()
     {
-        if(jumpNumber > 0)
+        if(jumpNumber >0)
         {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             jumpNumber -= 1;
