@@ -1,10 +1,19 @@
 fileFormatVersion: 2
 guid: c7b05eb4844f01f468eb25c904acbf76
-timeCreated: 1524587186
+timeCreated: 1524588265
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: emerg_0
+    21300000: emerg_1
+    21300002: emerg_9
+    21300004: emerg_0
+    21300006: emerg_2
+    21300008: emerg_3
+    21300010: emerg_4
+    21300012: emerg_5
+    21300014: emerg_6
+    21300016: emerg_7
+    21300018: emerg_8
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -46,9 +55,8 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -67,7 +75,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    androidETC2FallbackOverride: 0
   - buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -77,20 +84,150 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: emerg_0
+      name: emerg_9
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 256
-        height: 320
+        y: 4
+        width: 124
+        height: 60
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 1, z: 0, w: 0}
+      outline:
+      - - {x: -128, y: 160}
+        - {x: -128, y: -160}
+        - {x: 3, y: -160}
+        - {x: 128, y: -98}
+        - {x: 128, y: 160}
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: emerg_0
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 176
+        width: 3
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: emerg_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 260
+        width: 124
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: emerg_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 260
+        width: 124
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: emerg_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 196
+        width: 124
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: emerg_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 196
+        width: 125
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: emerg_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 132
+        width: 124
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: emerg_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 132
+        width: 125
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: emerg_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 124
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: emerg_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 68
+        width: 124
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
