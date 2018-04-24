@@ -6,10 +6,18 @@ public class BatController : MonoBehaviour
 {
 
     public int health = 75;
-    public float speed = 2;
-    public float trackRadius = 5f;
+    public float angularSpeed = 2f, radius = 2f;
+    //public float trackRadius = 5f;
     public bool isTracking = false;
     public GameObject Player;
+
+    private Vector2 center;
+    private float rotateAngle;
+
+	private void Start()
+	{
+        center = transform.position;
+	}
 
 	void Update ()
     {
@@ -19,14 +27,11 @@ public class BatController : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (Vector2.Distance(transform.position, Player.transform.position) <= trackRadius)
-        {
-            isTracking = true;
-        }
-        else
-        {
-            isTracking = false;
-        }
+        rotateAngle += angularSpeed * Time.deltaTime;
+
+        var offset = new Vector2(Mathf.Sin(rotateAngle), Mathf.Cos(rotateAngle)) * radius;
+
+        transform.position = center + offset;
 
 
 
