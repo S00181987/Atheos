@@ -17,6 +17,7 @@ public class ChangeSceneOnTrigger : MonoBehaviour
             if (!string.IsNullOrEmpty(sceneName))
             {
                 SceneManager.LoadScene(sceneName);
+                PlayerController.health = 100;
             }
         }
     }

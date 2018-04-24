@@ -25,17 +25,9 @@ public class PlayerController : MonoBehaviour
     Vector2 velocity;
     Rigidbody2D body;
     private SpriteRenderer spriteFlip;
-    //Text healthText;
     private Vector3 startPosition;//change to hub or begining of level? When health = 0.
 
 
-
-
-     /*void Awake()
-    {
-        healthText = GetComponent<Text>();
-    }
-        */
 
     void Start ()
     {
@@ -49,7 +41,6 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        //healthText.text = "Health: " + health;
         isAttacking = false;
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
@@ -66,9 +57,10 @@ public class PlayerController : MonoBehaviour
             spriteFlip.flipX = false;
         }
 
-        if (health<0)
+        if (health<=0)
         {//choose position of respawn. Hub or checkpoint in game.
-            int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene("TheHub");
+            health = 100;
         }
 
         //movement
@@ -206,8 +198,14 @@ public class PlayerController : MonoBehaviour
             }
 
         }
+        if (collision.gameObject.tag == "rat")
+        {
+            if (!isAttacking)
+            {
+                health -= 25;
+            }
 
-
+        }
 
         if (tag == "ground" || tag == "wall")
         {
@@ -233,14 +231,6 @@ public class PlayerController : MonoBehaviour
             if (!isAttacking)
             {
                 health -= 20;
-            }
-
-        }
-        else if (collision.gameObject.tag == "rat")
-        {
-            if (!isAttacking)
-            {
-                health -= 25;
             }
 
         }

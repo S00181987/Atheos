@@ -7,7 +7,6 @@ public class BatController : MonoBehaviour
 
     public int health = 75;
     public float angularSpeed = 2f, radius = 2f;
-    //public float trackRadius = 5f;
     public bool isTracking = false;
     public GameObject Player;
 
@@ -21,7 +20,7 @@ public class BatController : MonoBehaviour
 
 	void Update ()
     {
-        //Vector3 localPosition 
+        
         if (health <= 0)
         {
             Destroy(gameObject);
@@ -29,7 +28,7 @@ public class BatController : MonoBehaviour
 
         rotateAngle += angularSpeed * Time.deltaTime;
 
-        var offset = new Vector2(Mathf.Sin(rotateAngle), Mathf.Cos(rotateAngle)) * radius;
+        Vector2 offset = new Vector2(Mathf.Sin(rotateAngle), Mathf.Cos(rotateAngle)) * radius;
 
         transform.position = center + offset;
 
@@ -39,8 +38,7 @@ public class BatController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //string tag = collision.gameObject.tag;
-
+        
 
     }
 
