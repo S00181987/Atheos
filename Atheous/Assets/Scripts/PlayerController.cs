@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 10;
     public float jumpForce = 2f;
-    public static int health = 100, keys = 0, floppyDiscs = 2;//Number of floppies to determine what text is available to read.
+    public static int health = 100, keys = 0, floppyDiscs = 0;//Number of floppies to determine what text is available to read.
     public int jumpNumber = 2, maxJumps = 2;
 
     //animator variables
@@ -109,7 +109,7 @@ public class PlayerController : MonoBehaviour
         }
         //SWORD * * * * * * * * * * * * * * * * * * * * * * * *
         //Sword obtained after level one
-
+        /*
         if(floppyDiscs >= 1)
         {
             if (Input.GetKey(KeyCode.Z))
@@ -122,8 +122,8 @@ public class PlayerController : MonoBehaviour
                 attack = 0;
             }
         }
+        */
 
-        /*
         if (Input.GetKey(KeyCode.Z) && hasSword)
         {
             attack = 1;
@@ -132,7 +132,8 @@ public class PlayerController : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.Z) && hasSword)
         {
             attack = 0;
-        }*/
+        }
+
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
@@ -142,13 +143,13 @@ public class PlayerController : MonoBehaviour
 
 
         //JUMPS * * * * * * * * * * * * * * * * * * * * * * * *
-
+        /*
         if (floppyDiscs >= 2)
-            //double jump obtained after level 3
+            //double jump obtained after level 2
             maxJumps = 2;
         else
             maxJumps = 1;
-        
+        */
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
