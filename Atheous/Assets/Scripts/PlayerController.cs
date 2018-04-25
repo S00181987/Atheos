@@ -151,14 +151,14 @@ public class PlayerController : MonoBehaviour
         else
             maxJumps = 1;
         
-        /*
+
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             //DoubleJumpTwo();
             doubleJump();
             jump = 1;
         }
-        */
+
 
         animator.SetInteger("attack", attack);
         animator.SetInteger("defence", defence);
