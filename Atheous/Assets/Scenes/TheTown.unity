@@ -3493,15 +3493,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4980411985651558, guid: 19422d147a1d55540aa0efc590464981, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 76.1
+      value: -9.8
       objectReference: {fileID: 0}
     - target: {fileID: 4980411985651558, guid: 19422d147a1d55540aa0efc590464981, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.92
+      value: -3.73
       objectReference: {fileID: 0}
     - target: {fileID: 4980411985651558, guid: 19422d147a1d55540aa0efc590464981, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -10.007776
+      value: -10.01
       objectReference: {fileID: 0}
     - target: {fileID: 4980411985651558, guid: 19422d147a1d55540aa0efc590464981, type: 2}
       propertyPath: m_LocalRotation.x
@@ -8333,7 +8333,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -8356,7 +8356,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1502250322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.6404142, y: -0.9747963, z: -10.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9034,6 +9034,11 @@ Prefab:
         type: 2}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
       value: -0.0323854
+      objectReference: {fileID: 0}
+    - target: {fileID: 114793892487219364, guid: 139f2a517276ac44dbd1b365dece3264,
+        type: 2}
+      propertyPath: keys
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 139f2a517276ac44dbd1b365dece3264, type: 2}

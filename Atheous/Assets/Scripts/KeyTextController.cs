@@ -6,6 +6,7 @@ public class KeyTextController : MonoBehaviour
 {
 
     Text keyText;
+
     // Use this for initialization
     void Start()
     {

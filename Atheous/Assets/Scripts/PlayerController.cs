@@ -203,7 +203,7 @@ public class PlayerController : MonoBehaviour
         {
             if(!isAttacking)
             {
-                health -= 20;
+                health -= 10;
             }
 
         }
@@ -211,7 +211,7 @@ public class PlayerController : MonoBehaviour
         {
             if (!isAttacking)
             {
-                health -= 25;
+                health -= 10;
             }
 
         }
@@ -239,7 +239,7 @@ public class PlayerController : MonoBehaviour
         {
             if (!isAttacking)
             {
-                health -= 20;
+                health -= 10;
             }
 
         }
@@ -247,7 +247,7 @@ public class PlayerController : MonoBehaviour
         {
             if (!isAttacking)
             {
-                health -= 30;
+                health -= 15;
             }
 
         }

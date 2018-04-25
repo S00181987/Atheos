@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class KeyController : MonoBehaviour {
 
-	// Use this for initialization
+    // Use this for initialization
+    public int keys = 0;
 	void Start () {
 		
 	}
@@ -12,7 +13,10 @@ public class KeyController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-        
+        if (PlayerController.keys >= keys)
+        {
+            gameObject.SetActive(false);
+        }
 		
 	}
 
