@@ -112,12 +112,12 @@ public class PlayerController : MonoBehaviour
 
         if(floppyDiscs >= 1)
         {
-            if (Input.GetKey(KeyCode.Z))
+            if (Input.GetKey(KeyCode.Z) && hasSword)
             {
                 attack = 1;
                 isAttacking = true;
             }
-            else if (Input.GetKeyUp(KeyCode.Z))
+            else if (Input.GetKeyUp(KeyCode.Z) && hasSword)
             {
                 attack = 0;
             }
