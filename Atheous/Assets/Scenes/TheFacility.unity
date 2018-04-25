@@ -1593,7 +1593,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 688352339}
         m_MethodName: Unpause
         m_Mode: 1
         m_Arguments:
@@ -5885,7 +5885,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 688352339}
         m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
