@@ -12,11 +12,10 @@ public class PauseScreenController : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
-        if(Input.GetKey(KeyCode.M))
+        if(Input.GetKey(KeyCode.Escape))
         {
             Pause();
         }
-		
 	}
 
     public void Pause()

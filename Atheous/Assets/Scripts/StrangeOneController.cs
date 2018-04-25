@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WallJump : MonoBehaviour {
+public class StrangeOneController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
