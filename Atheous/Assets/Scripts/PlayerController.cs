@@ -57,8 +57,10 @@ public class PlayerController : MonoBehaviour
             spriteFlip.flipX = false;
         }
 
+        //if player dies, they are sent back to The Hub
+        //and health is reset to 100
         if (health<=0)
-        {//choose position of respawn. Hub or checkpoint in game.
+        {
             SceneManager.LoadScene("TheHub");
             health = 100;
         }
@@ -91,17 +93,23 @@ public class PlayerController : MonoBehaviour
             body.velocity = new Vector2(0, 0);
         }
 
-        if (Input.GetKey(KeyCode.C))
+
+        //SHIELD * * * * * * * * * * * * * * * * * * * * * * * *
+        if(floppyDiscs >=3)
         {
-            defence = 1;
+            if (Input.GetKey(KeyCode.C))
+            {
+                defence = 1;
+            }
+            else if (Input.GetKeyUp(KeyCode.C))
+            {
+                defence = 0;
+            }
         }
-        else if (Input.GetKeyUp(KeyCode.C))
-        {
-            defence = 0;
-        }
+
         //SWORD * * * * * * * * * * * * * * * * * * * * * * * *
         //Sword obtained after level one
-        /*
+
         if(floppyDiscs >= 1)
         {
             if (Input.GetKey(KeyCode.Z))
@@ -114,8 +122,9 @@ public class PlayerController : MonoBehaviour
                 attack = 0;
             }
         }
-        */
 
+        //This code used in development
+        /*
         if (Input.GetKey(KeyCode.Z) && hasSword)
         {
             attack = 1;
@@ -125,7 +134,7 @@ public class PlayerController : MonoBehaviour
         {
             attack = 0;
         }
-
+        */
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
@@ -135,21 +144,21 @@ public class PlayerController : MonoBehaviour
 
 
         //JUMPS * * * * * * * * * * * * * * * * * * * * * * * *
-        /*
+
         if (floppyDiscs >= 2)
             //double jump obtained after level 2
             maxJumps = 2;
         else
             maxJumps = 1;
-        */
-
+        
+        /*
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             //DoubleJumpTwo();
             doubleJump();
             jump = 1;
         }
-
+        */
 
         animator.SetInteger("attack", attack);
         animator.SetInteger("defence", defence);
