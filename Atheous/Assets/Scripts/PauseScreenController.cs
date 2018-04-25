@@ -8,11 +8,16 @@ public class PauseScreenController : MonoBehaviour
 
     public GameObject pauseMenu;
 
-	
+	private void Start()
+	{
+        pauseMenu.SetActive(false);
+	}
+
 	// Update is called once per frame
 	void Update () 
     {
-        if(Input.GetKey(KeyCode.Escape))
+        
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
             Pause();
         }
@@ -24,7 +29,7 @@ public class PauseScreenController : MonoBehaviour
         Time.timeScale = 0.0f;
     }
 
-    void Exit()
+    public void Exit()
     {
         SceneManager.LoadScene("mainmenu");
     }
