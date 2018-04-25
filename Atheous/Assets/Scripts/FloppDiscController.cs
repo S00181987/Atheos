@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class FloppDiscController : MonoBehaviour 
 {
-    PlayerController playerController;
+    
     public int floppies;
 
 
@@ -14,7 +14,7 @@ public class FloppDiscController : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
-        playerController = GameObject.FindGameObjectWithTag("player").GetComponent<PlayerController>();
+        
         if(PlayerController.floppyDiscs >= floppies)
         {
             gameObject.SetActive(false);

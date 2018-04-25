@@ -5,7 +5,7 @@ using UnityEngine;
 public class TurretController : MonoBehaviour
 {
 
-    private Animator attack;
+    //private Animator attack;
     public GameObject bulletHor;
     public int health = 60;
     public float spawnTimeHor = 2;
@@ -13,7 +13,7 @@ public class TurretController : MonoBehaviour
 
     private void Start()
     {
-        attack = GetComponent<Animator>();
+        //attack = GetComponent<Animator>();
     }
 
     // Update is called once per frame
