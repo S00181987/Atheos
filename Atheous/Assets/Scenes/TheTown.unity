@@ -3231,15 +3231,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4417850259145310, guid: c3f77bd08f193574ca0413682acf3884, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 76.1
+      value: -9.8
       objectReference: {fileID: 0}
     - target: {fileID: 4417850259145310, guid: c3f77bd08f193574ca0413682acf3884, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.92
+      value: -3.73
       objectReference: {fileID: 0}
     - target: {fileID: 4417850259145310, guid: c3f77bd08f193574ca0413682acf3884, type: 2}
       propertyPath: m_LocalScale.y
       value: 0.9749998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417850259145310, guid: c3f77bd08f193574ca0413682acf3884, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.01
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
