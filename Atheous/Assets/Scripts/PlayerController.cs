@@ -93,6 +93,16 @@ public class PlayerController : MonoBehaviour
             body.velocity = new Vector2(0, 0);
         }
 
+        //DEVELOPMENT * * * * * * * * * * * * * * * * * * * * * *
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            floppyDiscs++;
+        }
+        if(Input.GetKeyDown(KeyCode.G))
+        {
+            keys++;
+        }
+
 
         //SHIELD * * * * * * * * * * * * * * * * * * * * * * * *
         if(floppyDiscs >=3)
