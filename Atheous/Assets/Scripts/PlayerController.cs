@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     bool isOnGround = false;
     bool hasSword = true;//only activates when you get the sword.
     bool directionFlip = false;
-    bool jumpKeyDown, grounded, canDoubleJump = true;
+    bool jumpKeyDown, isDefending, grounded, canDoubleJump = true;
     public bool isAttacking = false;
     Vector2 force;
     Vector2 velocity;
@@ -110,10 +110,12 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKey(KeyCode.C))
             {
                 defence = 1;
+                isDefending = true;
             }
             else if (Input.GetKeyUp(KeyCode.C))
             {
                 defence = 0;
+                isDefending = false;
             }
         }
 
@@ -208,23 +210,26 @@ public class PlayerController : MonoBehaviour
 
         //Reaper damage
 
-
-        if (collision.gameObject.tag == "bullet")
+        if(!isDefending)
         {
-            if(!isAttacking)
+            if (collision.gameObject.tag == "bullet")
             {
-                health -= 10;
-            }
+                if (!isAttacking)
+                {
+                    health -= 10;
+                }
 
-        }
-        if (collision.gameObject.tag == "rat")
-        {
-            if (!isAttacking)
+            }
+            if (collision.gameObject.tag == "rat")
             {
-                health -= 10;
-            }
+                if (!isAttacking)
+                {
+                    health -= 10;
+                }
 
+            } 
         }
+
 
         if (tag == "ground" || tag == "wall")
         {
@@ -245,22 +250,26 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "reaper")
+        if(!isDefending)
         {
-            if (!isAttacking)
+            if (collision.gameObject.tag == "reaper")
             {
-                health -= 10;
-            }
+                if (!isAttacking)
+                {
+                    health -= 10;
+                }
 
-        }
-        else if (collision.gameObject.tag == "bat")
-        {
-            if (!isAttacking)
+            }
+            else if (collision.gameObject.tag == "bat")
             {
-                health -= 15;
-            }
+                if (!isAttacking)
+                {
+                    health -= 15;
+                }
 
+            }
         }
+
     }
 
 }
