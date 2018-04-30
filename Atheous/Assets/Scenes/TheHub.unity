@@ -2368,7 +2368,7 @@ MonoBehaviour:
     area what have they done.
 
 
-    [Press C for Sword]'
+    [Press Z for Sword]'
 --- !u!222 &849089462
 CanvasRenderer:
   m_ObjectHideFlags: 0
