@@ -788,8 +788,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7, y: 37}
-  m_SizeDelta: {x: 311, y: 88}
+  m_AnchoredPosition: {x: -7, y: 8.725}
+  m_SizeDelta: {x: 311, y: 144.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &274380256
 MonoBehaviour:
@@ -1980,8 +1980,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.2822814, y: 35.426987}
-  m_SizeDelta: {x: 311.1, y: 88.5}
+  m_AnchoredPosition: {x: -7.282282, y: 7.877289}
+  m_SizeDelta: {x: 311.1, y: 143.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &667599193
 MonoBehaviour:
@@ -2329,8 +2329,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.282257, y: 35.426987}
-  m_SizeDelta: {x: 311.1, y: 88.5}
+  m_AnchoredPosition: {x: -7.282257, y: 7.8776226}
+  m_SizeDelta: {x: 311.1, y: 143.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &849089461
 MonoBehaviour:
@@ -2364,8 +2364,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Your lab has been destroyed, a failed experiment now plagues the surrounding
+  m_Text: 'Your lab has been destroyed, a failed experiment now plagues the surrounding
     area what have they done.
+
+
+    [Press C for Sword]'
 --- !u!222 &849089462
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3171,8 +3174,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7, y: 37}
-  m_SizeDelta: {x: 311, y: 88}
+  m_AnchoredPosition: {x: -7, y: 8.7}
+  m_SizeDelta: {x: 311, y: 144.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1116284857
 MonoBehaviour:
@@ -3207,7 +3210,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Whaa\u2026\u2026\u2026. What happened where am I, and what has happened
-    to my lab. I don\u2019t remember any of this."
+    to my lab. I don\u2019t remember any of this.\n\n[Left/Right to move, Up to jump]"
 --- !u!222 &1116284858
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4772,8 +4775,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: 4}
-  m_SizeDelta: {x: 353.8, y: 161.8}
+  m_AnchoredPosition: {x: -1, y: -23.825}
+  m_SizeDelta: {x: 353.8, y: 217.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1529835252
 MonoBehaviour:
@@ -5213,8 +5216,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.882251, y: 38.199898}
-  m_SizeDelta: {x: 312.2, y: 86.2}
+  m_AnchoredPosition: {x: -7.882251, y: 8.599985}
+  m_SizeDelta: {x: 312.2, y: 145.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1702762402
 MonoBehaviour:
@@ -5248,8 +5251,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: No survivors left leave now, those monsters in the facility have destroyed
+  m_Text: 'No survivors left leave now, those monsters in the facility have destroyed
     everything. Why would they do this.
+
+
+    [Double Jump: Press Up twice]'
 --- !u!222 &1702762403
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5733,8 +5739,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.882248, y: 38.199898}
-  m_SizeDelta: {x: 312.2, y: 86.2}
+  m_AnchoredPosition: {x: -7.882248, y: 8.5999}
+  m_SizeDelta: {x: 312.2, y: 145.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1846422623
 MonoBehaviour:
@@ -5945,8 +5951,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.9999925, y: 4.0000153}
-  m_SizeDelta: {x: 353.8, y: 161.8}
+  m_AnchoredPosition: {x: -0.9999925, y: -23.8}
+  m_SizeDelta: {x: 353.8, y: 217.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1914649760
 MonoBehaviour:
@@ -5982,7 +5988,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "  \u2026.. Computer log 0560 safety mode in effect as remains of human
     life ceased after version 0.2 of the experiment. Each level has been contaminated
-    last sighting of human life was in the main hub at 0700 hours. "
+    last sighting of human life was in the main hub at 0700 hours. \n\n[Press C to
+    defent with shield]"
 --- !u!222 &1914649761
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -167,7 +167,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             //DoubleJumpTwo();
-            doubleJump();
+            DoubleJump();
             jump = 1;
         }
 
@@ -189,7 +189,7 @@ public class PlayerController : MonoBehaviour
 
 
 
-    private void doubleJump()
+    private void DoubleJump()
     {
         if(jumpNumber >0)
         {
