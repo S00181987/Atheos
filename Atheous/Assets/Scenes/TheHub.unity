@@ -5989,7 +5989,7 @@ MonoBehaviour:
   m_Text: "  \u2026.. Computer log 0560 safety mode in effect as remains of human
     life ceased after version 0.2 of the experiment. Each level has been contaminated
     last sighting of human life was in the main hub at 0700 hours. \n\n[Press C to
-    defent with shield]"
+    defend with shield]"
 --- !u!222 &1914649761
 CanvasRenderer:
   m_ObjectHideFlags: 0
