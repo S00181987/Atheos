@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
 
 
 
-    void Start ()
+    void Start()
     {
         force.y = jumpForce;
         body = GetComponent<Rigidbody2D>();
@@ -37,9 +37,9 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteFlip = GetComponent<SpriteRenderer>();
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
         isAttacking = false;
         float x = Input.GetAxis("Horizontal");
@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
 
         //if player dies, they are sent back to The Hub
         //and health is reset to 100
-        if (health<=0)
+        if (health <= 0)
         {
             SceneManager.LoadScene("TheHub");
             health = 100;
@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
             direction = 1;
             directionFlip = false;
 
-            if(Input.GetKey(KeyCode.Z))
+            if (Input.GetKey(KeyCode.Z))
             {
                 attack = 1;
             }
@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.RightArrow))
         {
-            body.velocity = new Vector2(0,0);
+            body.velocity = new Vector2(0, 0);
         }
         else if (Input.GetKeyUp(KeyCode.LeftArrow))
         {
@@ -94,18 +94,18 @@ public class PlayerController : MonoBehaviour
         }
 
         //DEVELOPMENT * * * * * * * * * * * * * * * * * * * * * *
-        if(Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             floppyDiscs++;
         }
-        if(Input.GetKeyDown(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.G))
         {
             keys++;
         }
 
 
         //SHIELD * * * * * * * * * * * * * * * * * * * * * * * *
-        if(floppyDiscs >=3)
+        if (floppyDiscs >= 3)
         {
             if (Input.GetKey(KeyCode.C))
             {
@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour
         //SWORD * * * * * * * * * * * * * * * * * * * * * * * *
         //Sword obtained after level one
 
-        if(floppyDiscs >= 1)
+        if (floppyDiscs >= 1)
         {
             if (Input.GetKey(KeyCode.Z) && hasSword)
             {
@@ -162,7 +162,7 @@ public class PlayerController : MonoBehaviour
             maxJumps = 2;
         else
             maxJumps = 1;
-        
+
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
@@ -191,13 +191,13 @@ public class PlayerController : MonoBehaviour
 
     private void DoubleJump()
     {
-        if(jumpNumber >0)
+        if (jumpNumber > 0)
         {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             jumpNumber -= 1;
             isOnGround = false;
         }
-        else if(jumpNumber == 0)
+        else if (jumpNumber == 0)
         {
             return;
         }
@@ -210,7 +210,7 @@ public class PlayerController : MonoBehaviour
 
         //Reaper damage
 
-        if(!isDefending)
+        if (!isDefending)
         {
             if (collision.gameObject.tag == "bullet")
             {
@@ -227,7 +227,7 @@ public class PlayerController : MonoBehaviour
                     health -= 10;
                 }
 
-            } 
+            }
         }
 
 
@@ -250,7 +250,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(!isDefending)
+        if (!isDefending)
         {
             if (collision.gameObject.tag == "reaper")
             {
